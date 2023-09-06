@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+      <meta http-equiv="Expires" content="0">
+      <meta http-equiv="Last-Modified" content="0">
+      <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+      <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <meta name="author" content="Nestor Eduardo Gonzalez Ramirez" />
+    <style type="text/css">
+      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+      div.comment { display:none }
+      table { border-collapse:collapse; page-break-after:always }
+      .gridlines td { border:1px dotted black }
+      .gridlines th { border:1px dotted black }
+      .b { text-align:center }
+      .e { text-align:center }
+      .f { text-align:right }
+      .inlineStr { text-align:left }
+      .n { text-align:right }
+      .s { text-align:left }
+      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style1 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style1 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#CEE3D7 }
+      th.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#CEE3D7 }
+      td.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style4 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style4 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style5 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      th.style5 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      td.style6 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      th.style6 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      td.style7 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style7 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style8 { vertical-align:top; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style8 { vertical-align:top; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#CFCFCF }
+      th.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#CFCFCF }
+      td.style10 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#CEE3D7 }
+      th.style10 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#CEE3D7 }
+      td.style11 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style11 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style12 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style12 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style13 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style13 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style14 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style14 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style15 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      th.style15 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      td.style16 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      th.style16 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      td.style17 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style17 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style18 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style18 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style19 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style19 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      table.sheet0 col.col0 { width:233.15555288pt }
+      table.sheet0 col.col1 { width:187.74444229pt }
+      table.sheet0 col.col2 { width:37.95555512pt }
+      table.sheet0 tr { height:15pt }
+      table.sheet0 tr.row0 { height:111pt }
+      table.sheet0 tr.row1 { height:17.25pt }
+      table.sheet0 tr.row2 { height:15pt }
+      table.sheet0 tr.row3 { height:15pt }
+      table.sheet0 tr.row4 { height:15pt }
+      table.sheet0 tr.row5 { height:28.5pt }
+      table.sheet0 tr.row6 { height:15pt }
+      table.sheet0 tr.row7 { height:15pt }
+      table.sheet0 tr.row8 { height:15pt }
+      table.sheet0 tr.row9 { height:42.75pt }
+      table.sheet0 tr.row10 { height:42.75pt }
+      table.sheet0 tr.row11 { height:15pt }
+      table.sheet0 tr.row12 { height:15pt }
+      table.sheet0 tr.row13 { height:28.5pt }
+      table.sheet0 tr.row14 { height:15pt }
+      table.sheet0 tr.row15 { height:15pt }
+      table.sheet0 tr.row16 { height:15pt }
+      table.sheet0 tr.row17 { height:15pt }
+      table.sheet0 tr.row18 { height:15pt }
+      table.sheet0 tr.row19 { height:15pt }
+      table.sheet0 tr.row20 { height:15pt }
+      table.sheet0 tr.row21 { height:15pt }
+      table.sheet0 tr.row22 { height:28.5pt }
+      table.sheet0 tr.row23 { height:15pt }
+      table.sheet0 tr.row24 { height:15pt }
+      table.sheet0 tr.row25 { height:15pt }
+      table.sheet0 tr.row26 { height:15pt }
+      table.sheet0 tr.row29 { height:15pt }
+      table.sheet0 tr.row30 { height:15pt }
+      table.sheet0 tr.row31 { height:15pt }
+      table.sheet0 tr.row32 { height:15pt }
+      table.sheet0 tr.row42 { height:28.5pt }
+      table.sheet0 tr.row43 { height:28.5pt }
+      table.sheet0 tr.row47 { height:28.5pt }
+      table.sheet0 tr.row48 { height:28.5pt }
+      table.sheet0 tr.row49 { height:15pt }
+      table.sheet0 tr.row50 { height:15pt }
+      table.sheet0 tr.row51 { height:15pt }
+      table.sheet0 tr.row52 { height:15pt }
+      table.sheet0 tr.row53 { height:15pt }
+      table.sheet0 tr.row54 { height:28.5pt }
+      table.sheet0 tr.row55 { height:15pt }
+      table.sheet0 tr.row56 { height:15pt }
+      table.sheet0 tr.row57 { height:15pt }
+      table.sheet0 tr.row58 { height:15pt }
+      table.sheet0 tr.row86 { height:50.25pt }
+      table.sheet0 tr.row87 { height:28.5pt }
+    </style>
+  </head>
+
+  <body>
+<style>
+@page { margin-left: 0.23622047244094in; margin-right: 0.23622047244094in; margin-top: 0.74803149606299in; margin-bottom: 0.74803149606299in; }
+body { margin-left: 0.23622047244094in; margin-right: 0.23622047244094in; margin-top: 0.74803149606299in; margin-bottom: 0.74803149606299in; }
+</style>
+    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0">
+        <col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <tbody>
+          <tr class="row0">
+            <td class="column0 style8 null style8" colspan="2">
+			<img style="width: 632px; height: 149px;" src="SaludOral_DentalElite_Cobertura_CPD.jpg" border="0" /></td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0 style2 s">Servicio Cubierto</td>
+            <td class="column1 style3 s">Valor a Pagar por el Usuario</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row2">
+            <td class="column0 style10 s style10" colspan="2">Consultas</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row3">
+            <td class="column0 style18 s">Consulta odontológica general</td>
+            <td class="column1 style9 s style9" rowspan="3">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column0 style18 s">Consulta con odontólogos especialistas</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row5">
+            <td class="column0 style18 s">Control de salud oral al recién nacido por odontopediatría</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row6">
+            <td class="column0 style10 s style10" colspan="2">Ayudas Diagnósticas</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row7">
+            <td class="column0 style19 s style19" rowspan="2">Ortopantomografía (radiografia panorámica), radiografias periapicales en dientes anteriores y  posteriores</td>
+            <td class="column1 style9 s style9" rowspan="5">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row8">
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row9">
+            <td class="column0 style18 s">Paquete ayudas diagnósticas para ortodoncia (panorex, lateral de cráneo, modelos, fotografías y trazos cefalómetricos), radiografías clínicas extraorales</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row10">
+            <td class="column0 style18 s">Exámenes de laboratorio pre quirúrgicos (protrombina, tiempo parcial de tromboplastina - hemograma)</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row11">
+            <td class="column0 style18 s">Fotografía intraoral</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row12">
+            <td class="column0 style10 s style10" colspan="2">Promoción y Prevención</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row13">
+            <td class="column0 style18 s">Paquete preventivo (profilaxis, detartraje, flúor, educación en higiene, control de placa bacteriana)</td>
+            <td class="column1 style9 s style9" rowspan="4">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row14">
+            <td class="column0 style18 s">Aplicación sellante por diente </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row15">
+            <td class="column0 style18 s">Control preventivo trimestral durante el embarazo </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row16">
+            <td class="column0 style18 s">Barniz de flúor</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row17">
+            <td class="column0 style10 s style10" colspan="2">Urgencias y Accidentes</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row18">
+            <td class="column0 style18 s">Atención de urgencias </td>
+            <td class="column1 style9 s style9" rowspan="3">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row19">
+            <td class="column0 style18 s">Anestesia general en caso de accidente</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row20">
+            <td class="column0 style18 s">Accidentes odontológicos</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row21">
+            <td class="column0 style10 s style10" colspan="2">Cirugía Oral</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row22">
+            <td class="column0 style18 s">Exodoncia simple de dientes temporales y permanentes </td>
+            <td class="column1 style9 s style9" rowspan="11">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row23">
+            <td class="column0 style18 s">Regularización de rebordes con fines protésicos</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row24">
+            <td class="column0 style18 s">Ventana quirúrgica </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row25">
+            <td class="column0 style18 s">Recesión de hiperplasias</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row26">
+            <td class="column0 style18 s">Frenillectomía</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row27">
+            <td class="column0 style18 s">Profundización de piso de boca </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row28">
+            <td class="column0 style18 s">Toma de biopsias </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row29">
+            <td class="column0 style19 s style19" rowspan="2">Cirugía de dientes incluidos</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row30">
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row31">
+            <td class="column0 style18 s">Extracción con odontosección</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row32">
+            <td class="column0 style18 s">Exodoncia de raíz abandonada</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row33">
+            <td class="column0 style10 s style10" colspan="2">Periodoncia</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row34">
+            <td class="column0 style18 s">Detartraje</td>
+            <td class="column1 style9 s style9" rowspan="6">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row35">
+            <td class="column0 style18 s">Fisioterapia oral</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row36">
+            <td class="column0 style18 s">Control de placa bacteriana </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row37">
+            <td class="column0 style18 s">Mantenimiento periodontal</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row38">
+            <td class="column0 style18 s">Curetaje a campo abierto</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row39">
+            <td class="column0 style18 s">Alargamiento de corona clínica</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row40">
+            <td class="column0 style10 s style10" colspan="2">Odontopediatría </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row41">
+            <td class="column0 style18 s">Cita de adaptación. Consulta</td>
+            <td class="column1 style9 s style9" rowspan="8">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row42">
+            <td class="column0 style18 s">Tratamiento conductos en dientes anteriores - temporales</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row43">
+            <td class="column0 style18 s">Tratamiento conductos en dientes posteriores - temporales</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row44">
+            <td class="column0 style18 s">Exodoncia diente temporal</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row45">
+            <td class="column0 style18 s">Frenectomía o frenillectomía</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row46">
+            <td class="column0 style18 s">Tres superficies de resina y/o ionómero</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row47">
+            <td class="column0 style18 s">Obturaciones en resina de dientes anteriores y posteriores</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row48">
+            <td class="column0 style18 s">Obturaciones en ionómero de dientes anteriores y posteriores</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row49">
+            <td class="column0 style10 s style10" colspan="2">Operatoria Dental</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row50">
+            <td class="column0 style18 s">Obturación en amalgama</td>
+            <td class="column1 style9 s style9" rowspan="5">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row51">
+            <td class="column0 style18 s">Obturación en resina de fotocurado</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row52">
+            <td class="column0 style18 s">Obturación en ionómero de vidrio </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row53">
+            <td class="column0 style18 s">Tres superficies en resina, ionómero o amalgama </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row54">
+            <td class="column0 style18 s">Restauraciones cervicales por abrasión, abfracción<br />
+y erosión</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row55">
+            <td class="column0 style10 s style10" colspan="2">Endodoncia</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row56">
+            <td class="column0 style18 s">Endodoncia en dientes anteriores / unirradicular</td>
+            <td class="column1 style9 s style9" rowspan="7">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row57">
+            <td class="column0 style18 s">Endodoncia en dientes premolares / birradiculares</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row58">
+            <td class="column0 style18 s">Endodoncia en dientes posteriores / multirradiculares</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row59">
+            <td class="column0 style18 s">Endodoncia en dientes anteriores en niños </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row60">
+            <td class="column0 style18 s">Endodoncia en dientes posteriores en niños </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row61">
+            <td class="column0 style18 s">Cirugía apical dientes anteriores</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row62">
+            <td class="column0 style18 s">Cirugía apical dientes posteriores</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row63">
+            <td class="column0 style10 s style10" colspan="2">Ortodoncia y Ortopedia*</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row64">
+            <td class="column0 style19 s style19" rowspan="3">Ortodoncia preventiva: (aparatología removible) frankel I, II, III y IV, bilmer estándar con arco eisler y tornillo, klamt estándar, progenie, pistas planas, activadores, kinetorl II, mentonera, fuerza extraoral, tornillo hirax, mascara facial con aditamentos de anclaje intraoral (generalmente hirax)</td>
+            <td class="column1 style9 s style9" rowspan="8">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row65">
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row66">
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row67">
+            <td class="column0 style19 s style19" rowspan="2">Ortopedia funcional maxilar un año de tratamiento: Controles de aparatología – consulta, quad hélix, activadores, aparatología fija para expansión palatina, aparatología fija para disyunción palatina, piano inclinado, ligaduras de caninos, aparatología fija, bompereta labial, aparatología removible extraoral, mentonera, mantenedor de espacio bilateral, arco lingual, botón de nance, rejilla fina para controles de hábitos, aparatología removible  placa de hawley modificada, aparatología removible intraoral para ganar espacio, aparatología removible extraoral protractor, mantenedor de espacio unilateral (banda y abrazadera), extracción seriada (previo estudio del caso), colocación y adaptación placa de progenie, colocación y adaptación bionator</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row68">
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row69">
+            <td class="column0 style19 s style19" rowspan="2">Controles mensuales ortodoncia correctiva</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row70">
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row71">
+            <td class="column0 style18 s">Retenedores</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row72">
+            <td class="column0 style10 s style10" colspan="2">Rehabilitación</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row73">
+            <td class="column0 style18 s">Núcleo colado unirradicular o multirradicular </td>
+            <td class="column1 style9 s style9" rowspan="6">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row74">
+            <td class="column0 style18 s">Prótesis fija por unidad</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row75">
+            <td class="column0 style18 s">Placa de bruxismo</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row76">
+            <td class="column0 style18 s">Provisionales acrílicos de autocurado</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row77">
+            <td class="column0 style18 s">Incrustación inlay </td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row78">
+            <td class="column0 style18 s">Prótesis parcial removible</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row79">
+            <td class="column0 style10 s style10" colspan="2">Estética</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row80">
+            <td class="column0 style18 s">Blanqueamiento cosmético</td>
+            <td class="column1 style9 s style9" rowspan="2">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row81">
+            <td class="column0 style18 s">Blanqueamiento de dientes no vital</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row82">
+            <td class="column0 style10 s style10" colspan="2">Cáncer Oral</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row83">
+            <td class="column0 style17 s style17" rowspan="2">Tratamiento para cáncer oral (quimioterapia, cobaltoterapia y radioterapia)</td>
+            <td class="column1 style9 s style9" rowspan="2">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row84">
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row85">
+            <td class="column0 style11 s style12" colspan="2">MP-FT-656</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row86">
+            <td class="column0 style13 s style14" colspan="2">*No se consideran la realización de tratamientos de ortodoncia y ortopedia funcional en forma simultánea.<br />
+Límite: Dos tratamientos por usuario durante la vigencia del contrato.</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row87">
+            <td class="column0 style15 s style16" colspan="2">Coomeva Medicina Prepagada S.A., autorizado mediante Resolución N° 1667 de Diciembre 12 de 1997. Programa Dental Elite, depositado y registrado ante la Superintendencia Nacional de Salud, código DE16, Rad N° 20223100301141791 de Agosto 18 de 2022 y NURC 2-2011-020311 de Abril 06 de 2011.</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
