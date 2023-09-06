@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+	  <meta http-equiv="Expires" content="0">
+	  <meta http-equiv="Last-Modified" content="0">
+	  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+	  <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <meta name="author" content="Gloria Gineth Mejia Marin" />
+    <style type="text/css">
+      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+      div.comment { display:none }
+      table { border-collapse:collapse; page-break-after:always }
+      .gridlines td { border:1px dotted black }
+      .gridlines th { border:1px dotted black }
+      .b { text-align:center }
+      .e { text-align:center }
+      .f { text-align:right }
+      .inlineStr { text-align:left }
+      .n { text-align:right }
+      .s { text-align:left }
+      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style1 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style1 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style2 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style2 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style4 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style4 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style5 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      th.style5 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      td.style6 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      th.style6 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      td.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style8 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style8 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style9 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style9 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style10 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:none #000000; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style10 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:none #000000; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style11 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style11 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style12 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:none #000000; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style12 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:none #000000; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style13 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style13 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style14 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style14 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style15 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#D9DCE1 }
+      th.style15 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#D9DCE1 }
+      td.style16 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#D9DCE1 }
+      th.style16 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#D9DCE1 }
+      td.style17 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      th.style17 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      td.style18 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      th.style18 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      td.style19 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style19 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style20 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style20 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style21 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style21 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style22 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style22 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style23 { vertical-align:top; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style23 { vertical-align:top; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style24 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#D9DCE1 }
+      th.style24 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#D9DCE1 }
+      td.style25 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style25 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style26 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style26 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style27 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style27 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style28 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style28 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style29 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style29 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style30 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style30 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style31 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style31 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style32 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      th.style32 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      table.sheet0 col.col0 { width:233.15555288pt }
+      table.sheet0 col.col1 { width:172.83333135pt }
+      table.sheet0 col.col2 { width:54.89999937pt }
+      table.sheet0 col.col3 { width:54.89999937pt }
+      table.sheet0 col.col4 { width:37.95555512pt }
+      table.sheet0 tr { height:15pt }
+      table.sheet0 tr.row0 { height:105pt }
+      table.sheet0 tr.row1 { height:17.25pt }
+      table.sheet0 tr.row2 { height:17.25pt }
+      table.sheet0 tr.row3 { height:15pt }
+      table.sheet0 tr.row4 { height:15pt }
+      table.sheet0 tr.row5 { height:15pt }
+      table.sheet0 tr.row6 { height:15pt }
+      table.sheet0 tr.row7 { height:28.5pt }
+      table.sheet0 tr.row8 { height:28.5pt }
+      table.sheet0 tr.row9 { height:15pt }
+      table.sheet0 tr.row10 { height:15pt }
+      table.sheet0 tr.row11 { height:15pt }
+      table.sheet0 tr.row12 { height:15pt }
+      table.sheet0 tr.row13 { height:15pt }
+      table.sheet0 tr.row14 { height:17.25pt }
+      table.sheet0 tr.row15 { height:15pt }
+      table.sheet0 tr.row16 { height:15pt }
+      table.sheet0 tr.row17 { height:15pt }
+      table.sheet0 tr.row18 { height:15pt }
+      table.sheet0 tr.row19 { height:28.5pt }
+      table.sheet0 tr.row20 { height:17.25pt }
+      table.sheet0 tr.row21 { height:15pt }
+      table.sheet0 tr.row22 { height:15pt }
+      table.sheet0 tr.row23 { height:15pt }
+      table.sheet0 tr.row24 { height:15pt }
+      table.sheet0 tr.row25 { height:15pt }
+      table.sheet0 tr.row26 { height:15pt }
+      table.sheet0 tr.row29 { height:15pt }
+      table.sheet0 tr.row30 { height:17.25pt }
+      table.sheet0 tr.row36 { height:17.25pt }
+      table.sheet0 tr.row37 { height:42.75pt }
+      table.sheet0 tr.row38 { height:42.75pt }
+      table.sheet0 tr.row39 { height:28.5pt }
+      table.sheet0 tr.row40 { height:57pt }
+      table.sheet0 tr.row41 { height:17.25pt }
+      table.sheet0 tr.row46 { height:28.5pt }
+      table.sheet0 tr.row47 { height:42.75pt }
+      table.sheet0 tr.row48 { height:42.75pt }
+      table.sheet0 tr.row49 { height:15pt }
+      table.sheet0 tr.row50 { height:15pt }
+      table.sheet0 tr.row51 { height:15pt }
+      table.sheet0 tr.row52 { height:15pt }
+      table.sheet0 tr.row53 { height:15pt }
+      table.sheet0 tr.row54 { height:15pt }
+      table.sheet0 tr.row55 { height:15pt }
+      table.sheet0 tr.row56 { height:15pt }
+      table.sheet0 tr.row57 { height:15pt }
+      table.sheet0 tr.row58 { height:15pt }
+      table.sheet0 tr.row59 { height:15pt }
+      table.sheet0 tr.row60 { height:15pt }
+      table.sheet0 tr.row61 { height:17.25pt }
+      table.sheet0 tr.row62 { height:99.75pt }
+      table.sheet0 tr.row63 { height:28.5pt }
+      table.sheet0 tr.row64 { height:17.25pt }
+      table.sheet0 tr.row65 { height:42.75pt }
+      table.sheet0 tr.row66 { height:42.75pt }
+      table.sheet0 tr.row67 { height:15pt }
+      table.sheet0 tr.row68 { height:15pt }
+      table.sheet0 tr.row69 { height:28.5pt }
+      table.sheet0 tr.row70 { height:15pt }
+      table.sheet0 tr.row71 { height:15pt }
+      table.sheet0 tr.row72 { height:15pt }
+      table.sheet0 tr.row73 { height:15pt }
+      table.sheet0 tr.row74 { height:15pt }
+      table.sheet0 tr.row75 { height:15pt }
+      table.sheet0 tr.row76 { height:99.75pt }
+      table.sheet0 tr.row77 { height:30pt }
+    </style>
+  </head>
+
+  <body>
+<style>
+@page { margin-left: 0.23622047244094in; margin-right: 0.23622047244094in; margin-top: 0.74803149606299in; margin-bottom: 0.74803149606299in; }
+body { margin-left: 0.23622047244094in; margin-right: 0.23622047244094in; margin-top: 0.74803149606299in; margin-bottom: 0.74803149606299in; }
+</style>
+    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0">
+        <col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <col class="col3">
+        <col class="col4">
+        <tbody>
+          <tr class="row0">
+            <td class="column0 style23 null style23" colspan="2">
+			<img style="width: 632px; height: 149px;" src="Oro_Cobertura.png" border="0" /></td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0 style7 s">Servicio Cubierto</td>
+            <td class="column1 style3 s">Valor a Pagar por el Usuario</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row2">
+            <td class="column0 style29 s style29" colspan="2">Consulta Externa</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row3">
+            <td class="column0 style8 s">Servicios de promoción y prevención</td>
+            <td class="column1 style13 s">De acuerdo con el CPD del servicio</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column0 style8 s">Consulta de medicina general</td>
+            <td class="column1 style14 n">$ 12,800</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row5">
+            <td class="column0 style8 s">Consulta de medicina especializada</td>
+            <td class="column1 style14 n">$ 45,700</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row6">
+            <td class="column0 style8 s">Consulta médica de urgencias</td>
+            <td class="column1 style14 n">$ 66,500</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row7">
+            <td class="column0 style8 s">Consulta médica general domiciliaria (horario hábil diurno) (*)</td>
+            <td class="column1 style14 n">$ 50,500</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row8">
+            <td class="column0 style8 s">Consulta médica general domiciliaria (horario no hábil y festivos) (*)</td>
+            <td class="column1 style14 n">$ 56,400</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row9">
+            <td class="column0 style8 s">Consulta de medicina general alternativa</td>
+            <td class="column1 style14 n">$ 12,800</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row10">
+            <td class="column0 style8 s">Consulta de medicina especializada alternativa</td>
+            <td class="column1 style14 n">$ 45,700</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row11">
+            <td class="column0 style8 s">Consulta de psicología</td>
+            <td class="column1 style14 n">$ 30,500</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row12">
+            <td class="column0 style8 s">Consulta de nutrición</td>
+            <td class="column1 style14 n">$ 31,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row13">
+            <td class="column0 style8 s">Consulta de optometría</td>
+            <td class="column1 style14 n">$ 31,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row14">
+            <td class="column0 style25 s style26" colspan="2">Servicio Odontológico</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row15">
+            <td class="column0 style8 s">Atención de urgencias del dolor</td>
+            <td class="column1 style14 n">$ 31,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row16">
+            <td class="column0 style8 s">Control preventivo salud oral</td>
+            <td class="column1 style14 n">$ 31,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row17">
+            <td class="column0 style8 s">Consulta odontológica general </td>
+            <td class="column1 style14 n">$ 31,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row18">
+            <td class="column0 style8 s">Consulta odontológica especializada</td>
+            <td class="column1 style14 n">$ 31,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row19">
+            <td class="column0 style8 s">Ayudas diagnósticas (radiografías periapicales de urgencia)</td>
+            <td class="column1 style14 n">$ 31,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row20">
+            <td class="column0 style25 s style26" colspan="2">Terapias Complementarias de Tratamiento</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row21">
+            <td class="column0 style8 s">Terapias físicas, foniátrica, ortóptica, respiratoria</td>
+            <td class="column1 style14 n">$ 15,100</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row22">
+            <td class="column0 style8 s">Terapia del lenguaje</td>
+            <td class="column1 style14 n">$ 30,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row23">
+            <td class="column0 style8 s">Terapia esclerosante</td>
+            <td class="column1 style14 n">$ 45,300</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row24">
+            <td class="column0 style8 s">Terapia cardíaca</td>
+            <td class="column1 style14 n">$ 15,100</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row25">
+            <td class="column0 style8 s">Terapia ocupacional</td>
+            <td class="column1 style14 n">$ 15,100</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row26">
+            <td class="column0 style8 s">Puvaterapia</td>
+            <td class="column1 style14 n">$ 15,100</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row27">
+            <td class="column0 style8 s">Psicoterapia por psicología</td>
+            <td class="column1 style14 n">$ 30,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row28">
+            <td class="column0 style8 s">Psicoterapia por psiquiatría</td>
+            <td class="column1 style14 n">$ 45,300</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row29">
+            <td class="column0 style9 s">Terapia domiciliaria</td>
+            <td class="column1 style14 n">$ 30,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row30">
+            <td class="column0 style25 s style26" colspan="2">Terapias Alternativas</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row31">
+            <td class="column0 style8 s">Acupuntura</td>
+            <td class="column1 style14 n">$ 15,100</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row32">
+            <td class="column0 style8 s">Homeopatía</td>
+            <td class="column1 style14 n">$ 30,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row33">
+            <td class="column0 style8 s">Medicina bioenergética</td>
+            <td class="column1 style14 n">$ 30,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row34">
+            <td class="column0 style8 s">Terapia neural</td>
+            <td class="column1 style14 n">$ 30,200</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row35">
+            <td class="column0 style8 s">Terapia con filtros</td>
+            <td class="column1 style14 n">$ 15,100</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row36">
+            <td class="column0 style27 s style28" colspan="2">Ayudas Diagnósticas</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row37">
+            <td class="column0 style8 s">Toda ayuda diagnóstica y/o procedimiento diagnóstico (incluyendo honorarios profesionales y gastos clínicos)</td>
+            <td class="column1 style32 s style32" rowspan="4"><span style="font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt">Laboratorio Clínico:</span><span style="color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt"><br />
+* Hasta 2 Exámenes: $ 0<br />
+* De 3 a 5 Exámenes: $ 15,100<br />
+* De 6 a 10 Exámenes: $ 30,200<br />
+* De 11 a 15 Exámenes: $ 45,300<br />
+* De 16 o más Exámenes: $ 60,400<br />
+<br />
+</span><span style="font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt">Otras Ayudas Diagnósticas</span><span style="color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt"><br />
+(Escala de valor)<br />
+Menor que medio (1/2) SMMLV $ 15,100<br />
+Medio (1/2) a un (1) SMMLV $ 30,200<br />
+Más de un (1) SMMLV $ 60,400</span></td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row38">
+            <td class="column0 style8 s">Toda ayuda diagnóstica y/o procedimiento diagnóstico (incluyendo honorarios profesionales y gastos clínicos)</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row39">
+            <td class="column0 style8 s">Ayudas diagnósticas de alta complejidad (incluye valor del medio de contraste)</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row40">
+            <td class="column0 style10 s">Otras ayudas diagnósticas de alta complejidad: Cardioangiografías y estudios vasculares complejos, cateterismo cardíaco y estudios electrofisiológicos cardíacos</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row41">
+            <td class="column0 style29 s style29" colspan="2">Urgencias, Hospitalización y Cirugía</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row42">
+            <td class="column0 style8 s">Urgencias</td>
+            <td class="column1 style14 n">$ 66,500</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row43">
+            <td class="column0 style8 s">Ayudas diagnósticas intrahospitalarias</td>
+            <td class="column1 style15 s style16" rowspan="18">Sin cpd</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row44">
+            <td class="column0 style8 s">Gastos hospitalarios</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row45">
+            <td class="column0 style8 s">Honorarios médicos y/o quirúrgicos</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row46">
+            <td class="column0 style8 s">Habitación hospitalaria individual sencilla sin límite de días</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row47">
+            <td class="column0 style8 s">Hospitalización tratamiento médico/quirúrgico (por urgencia) habitación individual sencilla. Donde exista oferta</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row48">
+            <td class="column0 style8 s">Hospitalización tratamiento médico/quirúrgico (programada) habitación individual sencilla. Donde exista oferta</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row49">
+            <td class="column0 style8 s">Hospitalización psiquiátrica</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row50">
+            <td class="column0 style11 s">Unidad de cuidado intensivo y/o cuidados intermedios</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row51">
+            <td class="column0 style11 s">Hospitalización en estado de coma</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row52">
+            <td class="column0 style8 s">Nutrición enteral y parenteral</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row53">
+            <td class="column0 style11 s">Transfusiones de sangre y sus derivados</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row54">
+            <td class="column0 style11 s">Hospitalización domiciliaria (**)</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row55">
+            <td class="column0 style11 s">Oxígeno domiciliario post hospitalario</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row56">
+            <td class="column0 style8 s">Material de osteosíntesis por accidente o trauma</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row57">
+            <td class="column0 style11 s">Material de osteosíntesis por enfermedad general </td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row58">
+            <td class="column0 style11 s">Prótesis, órtesis y marcapaso convencional</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row59">
+            <td class="column0 style11 s">Mallas de pared abdominal</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row60">
+            <td class="column0 style11 s">Coills o stent convencional o medicado cardiovascular</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row61">
+            <td class="column0 style25 s style26" colspan="2">Maternidad y Recién Nacido</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row62">
+            <td class="column0 style12 s">Cobertura de maternidad: Gastos clínicos, honorarios médicos, dos (2) ecografías nivel II, un (1) perfil biofísico fetal, una (1) ecografía de circulación fetoplacentaria, una (1) ecografía nivel III. Ecografías obstétricas ilimitadas para embarazos de alto riesgo. Analgesia obstétrica. (usuarias con derecho a la maternidad)</td>
+            <td class="column1 style24 s style16" rowspan="2">Sin cpd</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row63">
+            <td class="column0 style11 s">Atención neonatal: Atención intrahospitalaria no quirúrgica del recién nacido </td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row64">
+            <td class="column0 style30 s style31" colspan="2">Coberturas Otros Servicios</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row65">
+            <td class="column0 style11 s">Cobertura para tratamiento médico de cáncer (quimioterapia, cobaltoterapia, radioterapia y hormonoterapia)</td>
+            <td class="column1 style24 s style15" rowspan="9">Sin cpd</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row66">
+            <td class="column0 style11 s">Tratamiento del SIDA y sus complicaciones (medicamentos antirretrovirales exclusivamente de uso hospitalario)</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row67">
+            <td class="column0 style11 s">Trasplante de órganos</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row68">
+            <td class="column0 style11 s">Diálisis renal</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row69">
+            <td class="column0 style11 s">Servicio de ambulancia terrestre (bajo modalidad de reembolso)</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row70">
+            <td class="column0 style11 s">Asistencia en viaje (urgencias en el exterior)</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row71">
+            <td class="column0 style11 s">Auxilio funerario (seguro de vida)</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row72">
+            <td class="column0 style8 s">Lesiones ocasionadas por deportes de alto riesgo</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row73">
+            <td class="column0 style11 s">Exención por fallecimiento del contratante</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row74">
+            <td class="column0 style8 s">Reembolsos (previa autorización de auditoría médica)</td>
+            <td class="column1 style8 s">De acuerdo con el CPD del servicio</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row75">
+            <td class="column0 style21 s style22" colspan="2">MP-DC-829</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row76">
+            <td class="column0 style19 s style20" colspan="2">(*) El servicio se prestará inicialmente en las ciudades de Bogotá, Medellín, Cali, Barranquilla, Pereira y Bucaramanga.<br />
+(**) El servicio se prestará a través de la red de prestadores adscrita a COOMEVA MP S.A. y sus áreas de cobertura. En el evento que, el usuario no pueda acceder al servicio a través de la red de prestadores adscrita, la cobertura operará bajo la modalidad de reembolso y bajo las estipulaciones contempladas en la cláusula cuarta, numeral 8.14 Atención hospitalaria domiciliaria.</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row77">
+            <td class="column0 style17 s style18" colspan="2">Coomeva Medicina Prepagada S.A., autorizado mediante Resolución N° 1667 de Diciembre 12 de 1997. Programa Oro aprobado mediante Resolución N° 0118 de Enero 26 de 1999, código OR14, Rad. N° 20223100301141221 de Agosto 18 de 2022 de la Superintendencia Nacional de Salud.</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
