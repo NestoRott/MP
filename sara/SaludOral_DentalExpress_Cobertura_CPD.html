@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+      <meta http-equiv="Expires" content="0">
+      <meta http-equiv="Last-Modified" content="0">
+      <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+      <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <meta name="author" content="Nestor Eduardo Gonzalez Ramirez" />
+    <style type="text/css">
+      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+      div.comment { display:none }
+      table { border-collapse:collapse; page-break-after:always }
+      .gridlines td { border:1px dotted black }
+      .gridlines th { border:1px dotted black }
+      .b { text-align:center }
+      .e { text-align:center }
+      .f { text-align:right }
+      .inlineStr { text-align:left }
+      .n { text-align:right }
+      .s { text-align:left }
+      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style1 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style1 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style4 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style4 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#CFCFCF }
+      th.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#CFCFCF }
+      td.style6 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      th.style6 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#FFFFFF }
+      td.style7 { vertical-align:top; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style7 { vertical-align:top; text-align:center; border-bottom:1px solid #00B050 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      th.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:12pt; background-color:#CEE3D7 }
+      td.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#CFCFCF }
+      th.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:#CFCFCF }
+      td.style10 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style10 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style11 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style11 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style12 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      th.style12 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; font-weight:bold; color:#000000; font-family:'Segoe UI Emoji'; font-size:10pt; background-color:white }
+      td.style13 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      th.style13 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:1px solid #00B050 !important; border-right:none #000000; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      td.style14 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      th.style14 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #00B050 !important; border-top:1px solid #00B050 !important; border-left:none #000000; border-right:1px solid #00B050 !important; color:#000000; font-family:'Segoe UI Emoji'; font-size:7pt; background-color:white }
+      table.sheet0 col.col0 { width:233.15555288pt }
+      table.sheet0 col.col1 { width:164.02222034pt }
+      table.sheet0 col.col2 { width:37.95555512pt }
+      table.sheet0 tr { height:15pt }
+      table.sheet0 tr.row0 { height:111pt }
+      table.sheet0 tr.row1 { height:17.25pt }
+      table.sheet0 tr.row2 { height:17.25pt }
+      table.sheet0 tr.row3 { height:28.5pt }
+      table.sheet0 tr.row4 { height:17.25pt }
+      table.sheet0 tr.row5 { height:15pt }
+      table.sheet0 tr.row6 { height:17.25pt }
+      table.sheet0 tr.row7 { height:14.25pt }
+      table.sheet0 tr.row8 { height:15pt }
+      table.sheet0 tr.row9 { height:15pt }
+      table.sheet0 tr.row11 { height:22.5pt }
+    </style>
+  </head>
+
+  <body>
+<style>
+@page { margin-left: 0.23622047244094in; margin-right: 0.23622047244094in; margin-top: 0.74803149606299in; margin-bottom: 0.74803149606299in; }
+body { margin-left: 0.23622047244094in; margin-right: 0.23622047244094in; margin-top: 0.74803149606299in; margin-bottom: 0.74803149606299in; }
+</style>
+    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0">
+        <col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <tbody>
+          <tr class="row0">
+            <td class="column0 style7 null style7" colspan="2">
+			<img style="width: 632px; height: 149px;" src="SaludOral_DentalExpress_Cobertura_CPD.jpg" border="0" /></td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0 style2 s">Servicio Cubierto</td>
+            <td class="column1 style3 s">Valor a Pagar por el Usuario</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row2">
+            <td class="column0 style8 s style8" colspan="2">Promoción y Prevención</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row3">
+            <td class="column0 style10 s">Paquete preventivo (profilaxis, detartraje, flúor en gel, educación en higiene, control de placa bacteriana)</td>
+            <td class="column1 style5 s">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column0 style8 s style8" colspan="2">Ayudas Diagnósticas</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row5">
+            <td class="column0 style10 s">Radiografía intraoral periapical (de urgencia)</td>
+            <td class="column1 style5 s">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row6">
+            <td class="column0 style8 s style8" colspan="2">Urgencias y Accidentes</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row7">
+            <td class="column0 style10 s">Atención de urgencias </td>
+            <td class="column1 style9 s style9" rowspan="3">Sin CPD</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row8">
+            <td class="column0 style10 s">Anestesia general en caso de accidente</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row9">
+            <td class="column0 style10 s">Accidentes odontológicos</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row10">
+            <td class="column0 style11 s style12" colspan="2">MP-DC-850</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row11">
+            <td class="column0 style13 s style14" colspan="2">Coomeva Medicina Prepagada S.A., autorizado mediante Resolución N° 1667 de Diciembre 12 de 1997. Programa Dental Express, depositado y registrado ante la Superintendencia Nacional de Salud con el código DE06, Rad. N° 20223100301142301 de Agosto 18 de 2022.</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
